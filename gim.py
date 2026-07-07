@@ -1,3 +1,18 @@
+diccionario_plan = [
+    {
+        "codigo":'codigo',
+        "nombre":'nombre',
+        "tipo":'tipo',
+        "duración":'duracion',
+        "acceso piscina": 'acceso_piscina',
+        "incluye clases":'incluye_clases',
+        "horario":'horario',
+        "precio":'precio',
+        "cupos":'cupos',
+        
+    }
+]
+
 def menu_principal():
     print("========== MENÚ PRINCIPAL ==========")
     print("1. Cupos por tipo de plan")
@@ -40,7 +55,6 @@ def validar_nombre_plan():
  
 nombre_plan = validar_nombre_plan()
 
-
 planes = {   
         "nombre_plan":,
         "tipo": ,
@@ -65,8 +79,10 @@ def busqueda_precio(p_min, p_max):
             else:
                 print("Error: El precio minimo y maxiomo deben de ser mayot a 0")
         except ValueError:
-            print("Error: Ingrese un dato válido")
+            print("Debe ingresar valores enteros")
     
+    
+
     #for valor_plan in inscripciones:
 
 
@@ -80,8 +96,23 @@ inscripciones = {
 }
 
     
+def mostrar_codigo():
+    validar_codigo = False
+    while not validar_codigo:
+        codigo_agregar = input("Ingrese codigo: ")
+        if codigo_agregar == "" or codigo_agregar == " ":
+            print("No vacío ni solo espacios en blanco")
+        #agregar codigo repetido
+        else:
+            validar_codigo = True
+            break
+    return codigo_agregar
 
+codigo = mostrar_codigo()
 
+def agregar_plan(codigo, nombre, tipo, duracion, acceso_piscina, incluye_clases,
+horario, precio, cupos):
+    
 
 
 activo = False
